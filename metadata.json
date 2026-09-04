@@ -1,0 +1,6 @@
+{
+  "name": "Barbearia Nariko",
+  "description": "Barbearia premium especializada em corte masculino, barba, sobrancelha e química na Rua Adolfo Guimarães Barros, 14.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
