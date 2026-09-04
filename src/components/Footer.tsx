@@ -13,11 +13,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
           {/* Logo & Slogan */}
           <div className="md:col-span-5 flex flex-col">
-            <div className="mb-4">
+            <div className="mb-6">
               <img
                 src={BARBERSHOP_INFO.logoUrl}
                 alt={BARBERSHOP_INFO.name}
-                className="h-20 sm:h-20 w-auto max-w-[240px] sm:max-w-[260px] object-contain"
+                className="h-24 sm:h-28 w-auto max-w-[280px] sm:max-w-[320px] object-contain"
               />
             </div>
 

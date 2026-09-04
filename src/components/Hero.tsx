@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505] pt-20 pb-16"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505] pt-24 sm:pt-28 pb-16"
     >
       {/* Background Image with slow, subtle zoom and parallax */}
       <motion.div
@@ -36,14 +36,14 @@ export const Hero: React.FC = () => {
           src={IMAGES.hero}
           alt="Barbearia premium corte masculino"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-center filter grayscale-[30%] brightness-[0.45] contrast-[1.15]"
+          className="w-full h-full object-cover object-center filter brightness-[0.72] contrast-[1.05]"
         />
       </motion.div>
 
       {/* Cinematic dark gradients & vignette overlays */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#050505] via-[#050505]/75 to-[#050505]/40" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/60" />
-      <div className="absolute inset-0 z-10 bg-grain pointer-events-none opacity-40" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#050505]/85 via-[#050505]/40 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/50" />
+      <div className="absolute inset-0 z-10 bg-grain pointer-events-none opacity-20" />
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12">

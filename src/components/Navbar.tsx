@@ -43,8 +43,8 @@ export const Navbar: React.FC = () => {
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-black md:bg-[#050505]/90 backdrop-blur-md border-b border-white/10 py-2 sm:py-3 shadow-2xl'
-          : 'bg-black md:bg-gradient-to-b md:from-[#050505]/90 md:via-[#050505]/50 md:to-transparent border-b border-white/10 md:border-b-0 py-2.5 sm:py-4'
+          ? 'bg-black md:bg-[#050505]/95 backdrop-blur-md border-b border-white/10 py-1.5 sm:py-2 shadow-2xl'
+          : 'bg-black md:bg-gradient-to-b md:from-[#050505]/95 md:via-[#050505]/60 md:to-transparent border-b border-white/10 md:border-b-0 py-2 sm:py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -53,12 +53,16 @@ export const Navbar: React.FC = () => {
           id="navbar-logo"
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="flex items-center group cursor-pointer py-0.5"
+          className="flex items-center group cursor-pointer"
         >
           <img
             src={BARBERSHOP_INFO.logoUrl}
             alt={BARBERSHOP_INFO.name}
-            className="h-16 sm:h-16 md:h-15 w-auto max-w-[210px] sm:max-w-[250px] object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-lg"
+            className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-xl ${
+              isScrolled
+                ? 'h-20 sm:h-22 md:h-20 max-w-[260px] sm:max-w-[300px]'
+                : 'h-24 sm:h-28 md:h-26 max-w-[290px] sm:max-w-[350px]'
+            }`}
           />
         </a>
 
