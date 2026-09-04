@@ -13,13 +13,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
           {/* Logo & Slogan */}
           <div className="md:col-span-5 flex flex-col">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-sm border border-white/20 bg-white/5 flex items-center justify-center text-white">
-                <Scissors className="w-4 h-4 transform -rotate-45" />
-              </div>
-              <span className="font-bebas text-3xl tracking-widest text-white">
-                {BARBERSHOP_INFO.name}
-              </span>
+            <div className="mb-4">
+              <img
+                src={BARBERSHOP_INFO.logoUrl}
+                alt={BARBERSHOP_INFO.name}
+                className="h-20 sm:h-20 w-auto max-w-[240px] sm:max-w-[260px] object-contain"
+              />
             </div>
 
             <p className="text-xs uppercase tracking-[0.2em] text-neutral-400 mb-6 font-medium">

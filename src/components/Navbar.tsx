@@ -42,9 +42,9 @@ export const Navbar: React.FC = () => {
     <header
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#050505]/90 backdrop-blur-md border-b border-white/10 py-3 shadow-2xl'
-          : 'bg-gradient-to-b from-[#050505]/80 via-[#050505]/40 to-transparent py-5'
+        isScrolled || mobileMenuOpen
+          ? 'bg-black md:bg-[#050505]/90 backdrop-blur-md border-b border-white/10 py-2 sm:py-3 shadow-2xl'
+          : 'bg-black md:bg-gradient-to-b md:from-[#050505]/90 md:via-[#050505]/50 md:to-transparent border-b border-white/10 md:border-b-0 py-2.5 sm:py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -53,19 +53,13 @@ export const Navbar: React.FC = () => {
           id="navbar-logo"
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="flex items-center gap-2.5 group cursor-pointer"
+          className="flex items-center group cursor-pointer py-0.5"
         >
-          <div className="w-9 h-9 rounded-sm border border-white/20 bg-white/5 flex items-center justify-center text-white transition-colors duration-200 group-hover:border-white/50">
-            <Scissors className="w-4 h-4 transform -rotate-45" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bebas text-2xl tracking-widest text-white leading-none">
-              {BARBERSHOP_INFO.name}
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.25em] text-neutral-400 font-sans">
-              Estilo & Precisão
-            </span>
-          </div>
+          <img
+            src={BARBERSHOP_INFO.logoUrl}
+            alt={BARBERSHOP_INFO.name}
+            className="h-16 sm:h-16 md:h-15 w-auto max-w-[210px] sm:max-w-[250px] object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-lg"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -112,7 +106,7 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div
           id="mobile-drawer"
-          className="md:hidden bg-[#070707] border-b border-white/10 px-6 py-6 transition-all duration-200 shadow-2xl"
+          className="md:hidden bg-black border-b border-white/10 px-6 py-6 transition-all duration-200 shadow-2xl"
         >
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (

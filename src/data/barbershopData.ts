@@ -17,6 +17,7 @@ export const IMAGES = {
 export const BARBERSHOP_INFO = {
   name: 'NARIKO BARBEARIA',
   shortName: 'NARIKO',
+  logoUrl: 'https://i.ibb.co/1JwP6FQZ/imagem-2026-09-03-213723237.png',
   phoneFormatted: '(19) 98351-2056',
   phoneRaw: '5519983512056',
   address: 'R. Adolfo Guimarães Barros, 14 - Jardim Novo Campos Eliseos, Campinas - SP, 13060-414',
